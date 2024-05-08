@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .container {
+        min-width: 100vw;
+        /* ensure it spans the full width */
+        min-height: 100vh;
+        flex-direction: column;
+
+
+    }
+
+}

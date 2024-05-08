@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+  min-width: 100vw;
+  /* ensure it spans the full width */
+  min-height: 100vh;
+  /* ensure it covers at least the full height of the viewport */
+  margin: 0;
+  /* remove default margin */
+  padding: 0;
+  /* remove default padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  /* ensure consistent background */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+
+.imageColumn,
+.textColumn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verticalCenter {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.iphoneFrame {
+  width: 40vh;
+  max-width: 75vh;
+  height: auto;
+}
+
+.header {
+  margin-top: -1vh;
+  color: black;
+  max-width: 33vw;
+}
+
+.convertButton {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.convertButton:hover {
+  background-color: #333;
+}
+
+/* Mobile-specific styles */
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .App {
+    min-width: 100vw;
+    /* ensure it spans the full width */
+    min-height: 100vh;
+
+  }
+
+  .iphoneFrame {
+    width: 35vw;
+    /* Width relative to viewport width, better for aspect ratio */
+    margin-bottom: 2vh;
+  }
+
+  .header {
+    max-width: 50vw;
+    /* Responsive width */
+  }
+
+  .container {
+    flex-direction: column;
+    /* Stack elements vertically on small screens */
+  }
+
+  .header h1 {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    /* Responsive font size using clamp */
+  }
+
+  .convertButton {
+    font-size: 1rem;
+    /* Slightly larger font for readability */
+    padding: 1rem 1.5rem;
+    /* Increased padding for easier interaction */
+    min-height: 48px;
+    /* Minimum touch target size for better accessibility */
+    width: auto;
+    /* Adjust width based on content */
+  }
+}
